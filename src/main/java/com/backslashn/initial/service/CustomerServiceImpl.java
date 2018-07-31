@@ -4,10 +4,14 @@ import com.backslashn.initial.model.Customer;
 import com.backslashn.initial.repository.CustomerRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service("customerService")
+//@Scope("singleton") or leave it not annotaded. Default is singleton
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public  class CustomerServiceImpl implements CustomerService {
 
     CustomerRepository customerRepository;
@@ -19,10 +23,8 @@ public  class CustomerServiceImpl implements CustomerService {
         this.customerRepository = customerRepository;
     }
 
-    //Setter injection
     @Autowired
     public void setCustomerRepository(CustomerRepository customerRepository) {
-        System.out.println("Using setter injection");
         this.customerRepository = customerRepository;
     }
 
