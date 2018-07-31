@@ -4,10 +4,14 @@ import com.backslashn.initial.model.Customer;
 import com.backslashn.initial.repository.CustomerRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service("customerService")
+//@Scope("prototype") or @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public  class CustomerServiceImpl implements CustomerService {
 
     CustomerRepository customerRepository;

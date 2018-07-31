@@ -12,7 +12,10 @@ public class Application {
 
 //        CustomerService customerService  = new CustomerServiceImpl();
         CustomerService customerService = applicationContext.getBean("customerService", CustomerService.class);
+        CustomerService customerService1 = applicationContext.getBean("customerService", CustomerService.class);
 
+        System.out.println("customerService.hashCode " + customerService.hashCode());
+        System.out.println("customerService1.hashCode " + customerService1.hashCode());
 
         System.out.println("---List customers using foreach and getters---");
         for (Customer customer:customerService.findAll()) {
