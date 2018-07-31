@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service("customerService")
-//@Scope("singleton") or leave it not annotaded. Default is singleton
+//@Scope("singleton") or @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON) or leave it not annotaded. Default is singleton
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public  class CustomerServiceImpl implements CustomerService {
 
