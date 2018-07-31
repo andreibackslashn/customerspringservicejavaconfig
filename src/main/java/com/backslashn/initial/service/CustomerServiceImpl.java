@@ -10,7 +10,6 @@ import java.util.List;
 @Service("customerService")
 public  class CustomerServiceImpl implements CustomerService {
 
-//    @Autowired
     CustomerRepository customerRepository;
 
     public CustomerServiceImpl(){}

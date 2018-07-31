@@ -1,10 +1,5 @@
 package com.backslashn.initial;
 
-import com.backslashn.initial.repository.CustomerRepository;
-import com.backslashn.initial.repository.HibernateCustomerRepositoryImpl;
-import com.backslashn.initial.service.CustomerService;
-import com.backslashn.initial.service.CustomerServiceImpl;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
