@@ -1,13 +1,13 @@
 package com.backslashn.initial.repository;
 
 import com.backslashn.initial.model.Customer;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by andrei on 7/15/2018.
- */
+
+@Repository("customerRepository")
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 
     @Override
